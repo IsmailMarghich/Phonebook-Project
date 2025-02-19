@@ -20,20 +20,22 @@ Make sure you have the following installed:
    git clone https://github.com/your-username/phonebook.git
    cd phonebook
    ```
-
-2. Install dependencies:
+3. Install dependencies:
    ```sh
+   cd frontend/
+   npm install
+   cd ../backend/
    npm install
    ```
 
-3. Set up environment variables:
-   Create a `.env` file in the root directory and add:
+4. Set up environment variables:
+   Create a `.env` file in the /backend directory and add:
    ```sh
    MONGO_URI=your_mongodb_connection_string
    PORT=3001
    ```
 
-4. Start the development server:
+5. Start the development server:
    ```sh
    npm run dev
    ```
@@ -53,11 +55,12 @@ The frontend UI is built separately and needs to be bundled before deployment.
 
 To build the UI from Part 2 of the project:
 ```sh
+cd /frontend
 npm run build:ui
 ```
 ## Deployment
 
-The app is deployed using **Fly.io**.
+The app is deployed using **Fly.io** in the backend dicrectory.
 
 1. Deploy to Fly.io:
    ```sh
